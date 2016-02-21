@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/zSlammin/glitch-art-test/issues"
   },
-  "homepage": "https://github.com/zSlammin/glitch-art-test"
+  "homepage": "https://github.com/zSlammin/glitch-art-test",
+  "dependencies": {
+    "express": "^4.13.4"
+  }
 }
