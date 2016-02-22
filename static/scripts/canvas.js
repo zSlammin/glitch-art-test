@@ -14,7 +14,11 @@ function takeSnapshot(){
 				var img = new Image();
 				img.addEventListener("load", function() {
 					mainCtx = $("#glitch-canvas")[0].getContext("2d");
-					mainCtx.drawImage(img, 0, 0)
+					mainCtx.canvas.width = window.innerWidth;
+					console.log(window.innerWidth)
+					mainCtx.canvas.height = window.innerHeight;
+					mainCtx.drawImage(img, 0, 0, window.innerWidth, window.innerHeight)
+
 				})
 				img.setAttribute("src", data_uri)
 				Webcam.reset();
@@ -24,7 +28,6 @@ function takeSnapshot(){
 	} );
 }
 function glitchImage(){
-	console.log("image glitching")
 	var canvas = $("#glitch-canvas")[0]
 	var mainCtx = canvas.getContext("2d");
 	//console.log(canvas.clientWidth + " " + canvas.clientHeight)
