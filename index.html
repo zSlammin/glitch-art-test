@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Glitch Test</title>
+		<script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+		<script src="scripts/webcam.min.js" type="text/javascript"></script>
+		<script src="scripts/canvas.js" type="text/javascript"></script>
+		<script src="scripts/glitch-canvas.js" type="text/javascript"></script>
+		<link rel="stylesheet" href="/style/index.css">
+	</head>
+	<body onload="onPageLoad();">
+		<h1>Glitch Art Test</h1>
+		<div id="photo-studio">
+		<div id="my_camera"></div>
+			<form>
+				<input type=button value="Take Snapshot" onClick="takeSnapshot()">
+			</form>
+		</div>
+		<div id="glitch" class="no-display">
+			<canvas id="glitch-canvas" width="640" height="480">
+			</canvas>
+			<form class="no-display">
+				<input type="button" value="Glitch" onclick="glitchImage()">
+			</form>
+		</div>	
+		
+	</body>
+</html>
